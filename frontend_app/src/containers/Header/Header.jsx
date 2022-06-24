@@ -1,10 +1,51 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
+import { images } from '../../constants'
 import './Header.scss'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className='app__header app__flex'>
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 1.5 }}
+        className='app__header-info'
+      >
+        <div className='app__header-badge'>
+          <div className='badge-cmp app__flex'>
+            <span>👋</span>
+            <div style={{ marginLeft: 20 }}>
+              <p className='p-text'>Hello, I am</p>
+              <h1 className='head-text'>Lucas</h1>
+            </div>
+          </div>
+          <div className='tag-cmp app__flex'>
+            <p className='p-text'>Software Engineer</p>
+            <p className='p-text'>Data Scientist</p>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 1.0, delayChildren: 0.5 }}
+        className='app__header-img'
+      >
+        <img src={images.profilePic} alt='profile_bg' />
+        <motion.img
+          
+        >
+
+        </motion.img>
+
+      </motion.div>
+
+      <motion.div>
+        
+      </motion.div>
+
+    </div>
   )
 }
 
