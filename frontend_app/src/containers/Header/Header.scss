@@ -90,8 +90,12 @@
   }
 
   @media screen and (max-width: 1200px) {
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+
+    .badge-cmp, .tag-cmp {
+      padding: 0.5rem 2rem;
+    }
   }
 }
 
